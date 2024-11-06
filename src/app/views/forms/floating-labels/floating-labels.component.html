@@ -1,0 +1,378 @@
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header ngPreserveWhitespaces>
+        <strong>Create New Quotation</strong>
+      </c-card-header>
+      <c-card-body>
+        <form cForm class="row g-3 needs-validation" ngNativeValidate>
+
+          <!-- SAP Quotation No. -->
+          <c-col md="6">
+            <label cLabel for="sapQuotationNo">SAP Quotation No.</label>
+            <input cFormControl id="sapQuotationNo" required type="text" />
+            <c-form-feedback [valid]="false">Please enter SAP Quotation No.</c-form-feedback>
+          </c-col>
+
+          <!-- Rev No. -->
+          <c-col md="6">
+            <label cLabel for="revNo">Rev No.</label>
+            <input cFormControl id="revNo" required type="text" value="00" />
+            <c-form-feedback [valid]="false">Please enter Rev No.</c-form-feedback>
+          </c-col>
+
+          <!-- Customer Name 1 -->
+          <c-col md="6">
+            <label cLabel for="customerName1">Customer Name 1</label>
+            <input cFormControl id="customerName1" required type="text" />
+            <c-form-feedback [valid]="false">Please enter Customer Name 1.</c-form-feedback>
+          </c-col>
+
+          <!-- Customer Name 2 -->
+          <c-col md="6">
+            <label cLabel for="customerName2">Customer Name 2</label>
+            <input cFormControl id="customerName2" type="text" />
+          </c-col>
+
+          <!-- House & Street Name -->
+          <c-col md="6">
+            <label cLabel for="houseStreet">House & Street Name</label>
+            <input cFormControl id="houseStreet" type="text" />
+          </c-col>
+          <c-col md="6">
+
+          </c-col>
+          <!-- Valid From Date -->
+          <c-col md="6">
+            <label cLabel for="validFromDate">Valid From Date</label>
+            <input cFormControl id="validFromDate" required type="date" />
+            <c-form-feedback [valid]="false">Please enter a valid from date.</c-form-feedback>
+          </c-col>
+
+          <!-- Valid To Date -->
+          <c-col md="6">
+            <label cLabel for="validToDate">Valid To Date</label>
+            <input cFormControl id="validToDate" required type="date" />
+            <c-form-feedback [valid]="false">Please enter a valid to date.</c-form-feedback>
+          </c-col>
+
+          <!-- Selection for Material Details -->
+          <c-col md="6">
+            <label cLabel>Selection for Material Details</label>
+            <div>
+              <input type="radio" cFormControl name="materialDetails" value="fullDescription" /> Full Material Description
+              <input type="radio" cFormControl name="materialDetails" value="4digitDescription" /> 4 Digit Description
+              <input type="radio" cFormControl name="materialDetails" value="basicMaterial" /> Basic Material
+              <input type="radio" cFormControl name="materialDetails" value="drawing" /> Drawing #
+            </div>
+          </c-col>
+
+          <!-- Order Quantity -->
+          <c-col md="6">
+            <label cLabel for="orderQuantity">Order Quantity</label>
+            <input cFormControl id="orderQuantity" required type="number" />
+            <c-form-feedback [valid]="false">Please enter the order quantity.</c-form-feedback>
+          </c-col>
+
+          <!-- Discount Value -->
+          <c-col md="6">
+            <label cLabel for="discountValue">Discount Value</label>
+            <input cFormControl id="discountValue" required type="number" />
+            <c-form-feedback [valid]="false">Please enter the discount value.</c-form-feedback>
+          </c-col>
+
+          <!-- Surcharge Value -->
+          <c-col md="6">
+            <label cLabel for="surchargeValue">Surcharge Value</label>
+            <input cFormControl id="surchargeValue" required type="number" />
+            <c-form-feedback [valid]="false">Please enter the surcharge value.</c-form-feedback>
+          </c-col>
+
+          <!-- Usage -->
+          <c-col md="6">
+            <label cLabel for="usage">Usage</label>
+            <select cSelect id="usage" required>
+              <option value="">Select Usage</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <c-form-feedback [valid]="false">Please select a usage option.</c-form-feedback>
+          </c-col>
+
+          <!-- Project ID -->
+          <c-col md="6">
+            <label cLabel for="projectId">Project ID</label>
+            <select cSelect id="projectId" required>
+              <option value="">Select Project ID</option>
+              <option value="1">Project 1</option>
+              <option value="2">Project 2</option>
+              <option value="3">Project 3</option>
+            </select>
+            <c-form-feedback [valid]="false">Please select a Project ID.</c-form-feedback>
+          </c-col>
+
+          <c-col xs="12">
+            <button cButton color="primary" type="submit">
+              Submit Quotation
+            </button>
+          </c-col>
+        </form>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+
+
+<!--<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header ngPreserveWhitespaces>
+        <strong>Create New User</strong>
+      </c-card-header>
+      <c-card-body>
+
+          <form cForm class="row g-3 needs-validation" ngNativeValidate>
+            <c-col md="6">
+              <label cLabel for="validationServer01">First name</label>
+              <input [valid]="true"
+                     cFormControl
+                     id="validationServer01"
+                     required
+                     type="text"
+                     value="Test"
+              />
+              <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+              <c-form-feedback [valid]="false">Please Enter Name.</c-form-feedback>
+            </c-col>
+            <c-col md="6">
+              <label cLabel for="validationServer02">Last name</label>
+              <input [valid]="true"
+                     cFormControl
+                     id="validationServer02"
+                     required
+                     type="text"
+                     value="Otto"
+              />
+              <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+            </c-col>
+            <c-col md="6">
+              <label cLabel for="validationServerUsername">Username</label>
+              <c-input-group class="has-validation">
+
+                <input [valid]="false"
+                       aria-describedby="inputGroupPrepend03"
+                       cFormControl
+                       id="validationServerUsername"
+                       required
+                       type="text"
+                />
+                <c-form-feedback [valid]="false">Please choose a username.</c-form-feedback>
+              </c-input-group>
+            </c-col>
+            <c-col md="6">
+              <label cLabel for="validationServer03">Password</label>
+              <input [valid]="false" cFormControl id="validationServer03" required type="password" />
+              <c-form-feedback [valid]="false">Please provide a password.</c-form-feedback>
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="validationDefault01">Email</label>
+              <input [valid]="false" cFormControl id="validationDefault01" required type="text" value="Mark" />
+              <c-form-feedback [valid]="false">Please enter valid email</c-form-feedback>
+            </c-col>
+
+
+            <c-col md="4">
+              <label cLabel for="validationServer05">Role</label>
+              <div class="mb-3">
+                <select aria-label="select example" cSelect required>
+                  <option value="">----SELECT---</option>
+                  <option value="1">Manager</option>
+                  <option value="2">Superviser</option>
+                  <option value="3">Director</option>
+                </select>
+                <c-form-feedback [valid]="false">Example invalid select feedback</c-form-feedback>
+              </div>
+              <c-form-feedback [valid]="false">Please select role.</c-form-feedback>
+          </c-col>
+
+          <c-col md="4">
+            <label cLabel for="validationServer05">Department</label>
+            <div class="mb-3">
+              <select aria-label="select example" cSelect required>
+                <option value="">----SELECT---</option>
+                <option value="1">Sales</option>
+                <option value="2">HR</option>
+                <option value="3">IT</option>
+              </select>
+              <c-form-feedback [valid]="false">Example invalid select feedback</c-form-feedback>
+            </div>
+            <c-form-feedback [valid]="false">Please select department.</c-form-feedback>
+        </c-col>
+
+
+            <c-col xs="12">
+              <button cButton color="primary" type="submit">
+                Submit form
+              </button>
+            </c-col>
+          </form>
+
+      </c-card-body>
+    </c-card>
+  </c-col>-->
+
+
+  <!--<c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Angular Floating labels</strong>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-body-secondary small">
+          Wrap a pair of <code>&lt;cFormControl&gt;</code> and <code>&lt;label&gt;</code>
+          elements in <code>cFormControl</code> to enable floating labels with textual form
+          fields. A <code>placeholder</code> is required on each <code>&lt;input&gt;</code>
+          as our method of CSS-only floating labels uses the <code>:placeholder-shown</code>
+          pseudo-element. Also note that the <code>&lt;cFormControl&gt;</code> must come first so
+          we can utilize a sibling selector (e.g., <code>~</code>).
+        </p>
+        <app-docs-example href="forms/floating-labels">
+          <div [cFormFloating]="true" class="mb-3">
+            <input cFormControl id="floatingInput" placeholder="name@example.com" type="email" />
+            <label cLabel for="floatingInput">Email address</label>
+          </div>
+          <div cFormFloating>
+            <input cFormControl id="floatingPassword" placeholder="Password" type="password" />
+            <label cLabel for="floatingPassword">Password</label>
+          </div>
+        </app-docs-example>
+        <p class="text-body-secondary small">
+          When there&#39;s a <code>value</code> already defined, <code>&lt;label&gt;</code>
+          s will automatically adjust to their floated position.
+        </p>
+        <app-docs-example href="forms/floating-labels">
+          <form cForm cFormFloating>
+            <input
+              cFormControl
+              id="floatingInputValue"
+              placeholder="name@example.com"
+              type="email"
+              value="test@example.com"
+            />
+            <label cLabel for="floatingInputValue">Input with value</label>
+          </form>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Angular Floating labels</strong> <small>Textareas</small>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-body-secondary small">
+          By default, <code>&lt;CFormTextarea&gt;</code>s will be the same height as
+          <code>&lt;input&gt;</code>s.
+        </p>
+        <app-docs-example href="forms/floating-labels#textareas">
+          <div cFormFloating>
+            <input
+              cFormControl
+              id="floatingTextarea"
+              placeholder="Leave a comment here"
+              type="text"
+            >
+            <label cLabel for="floatingTextarea">Comments</label>
+          </div>
+        </app-docs-example>
+        <p class="text-body-secondary small">
+          To set a custom height on your <code>&lt;CFormTextarea;&gt;</code>, do not use the
+          <code>rows</code> attribute. Instead, set an explicit <code>height</code> (either
+          inline or via custom CSS).
+        </p>
+        <app-docs-example href="forms/floating-labels#textareas">
+          <div cFormFloating>
+            <textarea [ngStyle]="{ 'height.px': 100 }"
+                      cFormControl
+                      id="floatingTextarea2"
+                      placeholder="Leave a comment here"
+            ></textarea>
+            <label cLabel for="floatingTextarea2">Comments</label>
+          </div>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Angular Floating labels</strong> <small>Selects</small>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-body-secondary small">
+          Other than <code>&lt;input&gt;</code>, floating labels are only available on
+          <code>&lt;cSelect&gt;</code>s. They work in the same way, but unlike
+          <code>&lt;input&gt;</code>s, they&#39;ll always show the
+          <code>&lt;label&gt;</code> in its floated state.
+          <strong>
+            Selects with <code>size</code> and <code>multiple</code> are not supported.
+          </strong>
+        </p>
+        <app-docs-example href="forms/floating-labels#selects">
+          <div cFormFloating>
+            <select aria-label="Floating label select example" cSelect id="floatingSelect">
+              <option>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <label cLabel for="floatingSelect">Works with selects</label>
+          </div>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Angular Floating labels</strong> <small>Layout</small>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-body-secondary small">
+          When working with the CoreUI for Bootstrap grid system, be sure to place form elements
+          within column classes.
+        </p>
+        <app-docs-example href="forms/floating-labels#layout">
+          <c-row [gutter]="{g: 2}">
+            <c-col md>
+              <div cFormFloating>
+                <input
+                  cFormControl
+                  id="floatingInputGrid"
+                  placeholder="name@example.com"
+                  type="email"
+                  value="email@example.com"
+                />
+                <label cLabel for="floatingInputGrid">Email address</label>
+              </div>
+            </c-col>
+            <c-col md>
+              <div cFormFloating>
+                <select aria-label="Floating label select example" cSelect id="floatingSelectGrid">
+                  <option>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <label cLabel for="floatingSelectGrid">Works with selects</label>
+              </div>
+            </c-col>
+          </c-row>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>-->
+
